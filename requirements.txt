@@ -1,0 +1,66 @@
+# ============================================================
+# ScaleComm — Requirements
+# Deep Learning for Community Detection
+# ============================================================
+
+# ---- Core Deep Learning ----
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ---- Graph Neural Networks ----
+torch-geometric>=2.3.0
+torch-scatter>=2.1.0
+torch-sparse>=0.6.17
+torch-cluster>=1.6.0
+
+# ---- Graph utilities ----
+networkx>=3.1
+python-louvain>=0.16          # Community detection baseline (Louvain)
+
+# ---- Scientific computing ----
+numpy>=1.24.0
+scipy>=1.10.0
+
+# ---- Machine learning utilities ----
+scikit-learn>=1.2.0
+
+# ---- Data & IO ----
+pandas>=1.5.0
+h5py>=3.8.0                   # For large dataset storage
+
+# ---- Visualization ----
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ---- Experiment tracking (optional but recommended) ----
+# wandb>=0.15.0               # Uncomment for W&B experiment tracking
+# tensorboard>=2.12.0         # Uncomment for TensorBoard
+
+# ---- Utilities ----
+tqdm>=4.65.0                  # Progress bars
+pyyaml>=6.0                   # Config file support
+rich>=13.0.0                  # Better terminal output (optional)
+
+# ============================================================
+# INSTALLATION NOTES
+# ============================================================
+# 
+# For PyTorch Geometric, install with matching CUDA version:
+#
+# CPU only:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   pip install torch-geometric
+#   pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
+#
+# CUDA 11.8:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#   pip install torch-geometric
+#   pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
+#
+# CUDA 12.1:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#   pip install torch-geometric
+#   pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.0.0+cu121.html
+#
+# See: https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+# ============================================================
